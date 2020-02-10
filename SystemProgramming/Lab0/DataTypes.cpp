@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <Windows.h>
+#include <locale.h>
 int main() {
+	setlocale(LC_CTYPE, "rus");
+	printf("Лабораторная работа №0\nВыполнил: Сытник А.В. группа 535а\n\n");
 	printf("SHORT\t\tSIZE: %iB\tMIN: %i\t\tMAX: %i\n", sizeof(SHORT), -32768, 32767);
 	printf("WORD\t\tSIZE: %iB\tMIN: %i\t\t\tMAX: %i\n", sizeof(WORD), 0, 65535);
 	printf("INT\t\tSIZE: %iB\tMIN: %i\tMAX: %i\n", sizeof(INT), -2147483647 - 1, 2147483647);
