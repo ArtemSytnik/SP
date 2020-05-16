@@ -4,12 +4,11 @@
 #include <limits.h>
 #include <float.h>
 int main() {
-	setlocale(LC_CTYPE, "rus");
-	printf("Лабораторная работа №0\nВыполнил: Сытник А.В. группа 535а\n\n");
-	//Вывод типов данных
+	printf("Laboratory work #1\nCompleted by: Sytnik A.V. group 535a\n\n");
+	//Р’С‹РІРѕРґ С‚РёРїРѕРІ РґР°РЅРЅС‹С…
 	printf("char\t\t\tSIZE: %iB\tMIN: %i\t\t\tMAX: %i\n", sizeof(char), CHAR_MIN, CHAR_MAX);
 	printf("signed char\t\tSIZE: %iB\tMIN: %i\t\t\tMAX: %i\n", sizeof(signed char), SCHAR_MIN, SCHAR_MAX);
-	printf("unsigned char\t\tSIZE: %iB\tMIN: %i\t\t\t\tMAX: %i\n", sizeof(unsigned char),0, UCHAR_MAX);
+	printf("unsigned char\t\tSIZE: %iB\tMIN: %i\t\t\t\tMAX: %i\n", sizeof(unsigned char), 0, UCHAR_MAX);
 	printf("short\t\t\tSIZE: %iB\tMIN: %hi\t\t\tMAX: %hi\n", sizeof(short), SHRT_MIN, SHRT_MAX);
 	printf("unsigned short\t\tSIZE: %iB\tMIN: %hu\t\t\t\tMAX: %hu\n", sizeof(unsigned short), 0, USHRT_MAX);
 	printf("int\t\t\tSIZE: %iB\tMIN: %i\t\tMAX: %i\n", sizeof(int), INT_MIN, INT_MAX);

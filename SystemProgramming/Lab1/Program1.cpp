@@ -6,8 +6,7 @@ void ErrorGenerate();
 void InfoOutput();
 
 int main(int argc, char *argv[]) {
-	setlocale(LC_CTYPE, "rus");
-	if(argv[1] != NULL){
+	if (argv[1] != NULL) {
 		if (strcmp(argv[1], "-e") == 0) {
 			ErrorGenerate();
 		}
@@ -15,17 +14,17 @@ int main(int argc, char *argv[]) {
 			InfoOutput();
 		}
 		else {
-			printf("Неверный ключ!\n");
+			printf("Wrong key!\n");
 		}
 	}
 	else {
-		printf("Отсутствует ключ!\n");
+		printf("Missing key!\n");
 	}
 	system("pause");
 	return 0;
 }
 
-void ErrorGenerate(){
+void ErrorGenerate() {
 	MEMORYSTATUS lpBuffer;
 	GlobalMemoryStatus(&lpBuffer);
 
@@ -48,7 +47,7 @@ void ErrorGenerate(){
 	LocalFree(lpMsgBuf);
 }
 
-void InfoOutput(){
+void InfoOutput() {
 	SYSTEM_INFO s_info;
 
 	GetNativeSystemInfo(
