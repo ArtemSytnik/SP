@@ -61,7 +61,7 @@ DWORD WINAPI thread_get_min(LPVOID use_critical_section)
 	{
 		while (!TryEnterCriticalSection(&section))
 		{
-			//Ожидиание освобождения критической секции.
+			//РћР¶РёРґРёР°РЅРёРµ РѕСЃРІРѕР±РѕР¶РґРµРЅРёСЏ РєСЂРёС‚РёС‡РµСЃРєРѕР№ СЃРµРєС†РёРё.
 		}
 	}
 
@@ -87,7 +87,7 @@ DWORD WINAPI thread_get_max(LPVOID use_critical_section)
 	{
 		while (!TryEnterCriticalSection(&section))
 		{
-			//Ожидиание освобождения критической секции.
+			//РћР¶РёРґРёР°РЅРёРµ РѕСЃРІРѕР±РѕР¶РґРµРЅРёСЏ РєСЂРёС‚РёС‡РµСЃРєРѕР№ СЃРµРєС†РёРё.
 		}
 	}
 
@@ -113,7 +113,7 @@ DWORD WINAPI thread_get_avg(LPVOID use_critical_section)
 	{
 		while (!TryEnterCriticalSection(&section))
 		{
-			//Ожидиание освобождения критической секции.
+			//РћР¶РёРґРёР°РЅРёРµ РѕСЃРІРѕР±РѕР¶РґРµРЅРёСЏ РєСЂРёС‚РёС‡РµСЃРєРѕР№ СЃРµРєС†РёРё.
 		}
 	}
 

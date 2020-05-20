@@ -10,9 +10,9 @@ DWORD WINAPI thread_function(LPVOID param);
 
 int main()
 {
-	// Количество указателей
+	// РљРѕР»РёС‡РµСЃС‚РІРѕ СѓРєР°Р·Р°С‚РµР»РµР№
 	int maximum_handles;
-	// Количество потоков
+	// РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕС‚РѕРєРѕРІ
 	int maximum_threads;
 	srand(time(NULL));
 	printf("Laboratory work #5\nCompleted by: Sytnik A.V. group 535a\n\n");
@@ -22,7 +22,7 @@ int main()
 	printf("Please input max number of threads : ");
 	scanf("%i", &maximum_threads);
 
-	//Создание семафора
+	//РЎРѕР·РґР°РЅРёРµ СЃРµРјР°С„РѕСЂР°
 	HANDLE* threads = new HANDLE[maximum_threads];
 	semaphore = CreateSemaphoreA(NULL, maximum_handles, maximum_handles, "MySemaphore");
 	if (semaphore == NULL) {
@@ -31,7 +31,7 @@ int main()
 		return 1;
 	}
 		
-	//Создание файла
+	//РЎРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°
 	HANDLE file = CreateFileA("work_result.txt", GENERIC_WRITE, FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (file == INVALID_HANDLE_VALUE)
 	{
@@ -43,16 +43,16 @@ int main()
 	for (int i = 0; i < maximum_threads; i++)
 	{
 		int* params = new int[2];
-		params[0] = i; //Количество потоков
-		params[1] = get_randomised_integer(1, 5); //Время сна.
+		params[0] = i; //РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕС‚РѕРєРѕРІ
+		params[1] = get_randomised_integer(1, 5); //Р’СЂРµРјСЏ СЃРЅР°.
 									  
 		threads[i] = CreateThread(
-			NULL, // дескриптор защиты
-			0, // начальный размер стека
-			thread_function, // функция потока
-			(LPVOID)params, // параметры потока
-			NULL, // опции создания
-			NULL);// идентификатор потока
+			NULL, // РґРµСЃРєСЂРёРїС‚РѕСЂ Р·Р°С‰РёС‚С‹
+			0, // РЅР°С‡Р°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ СЃС‚РµРєР°
+			thread_function, // С„СѓРЅРєС†РёСЏ РїРѕС‚РѕРєР°
+			(LPVOID)params, // РїР°СЂР°РјРµС‚СЂС‹ РїРѕС‚РѕРєР°
+			NULL, // РѕРїС†РёРё СЃРѕР·РґР°РЅРёСЏ
+			NULL);// РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕС‚РѕРєР°
 	}
 	WaitForMultipleObjects(maximum_threads, threads, TRUE, INFINITE);
 	return 0;
