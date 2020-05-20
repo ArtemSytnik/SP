@@ -1,0 +1,9 @@
+Thread number 3 made his work in 1.000000 seconds
+Thread number 2 made his work in 2.000000 seconds
+Thread number 4 made his work in 3.000000 seconds
+Thread number 6 made his work in 4.000000 seconds
+Thread number 1 made his work in 5.000000 seconds
+Thread number 8 made his work in 5.000000 seconds
+Thread number 7 made his work in 5.000000 seconds
+Thread number 9 made his work in 6.000000 seconds
+Thread number 5 made his work in 8.000000 seconds
